@@ -10,7 +10,7 @@
 
 @section('content')
 
-<div class="">    
+<div class="">
     <div class="card">
         <div class="card-header">
             <h4 class="card-title">Box Artikel</h4>
@@ -20,7 +20,7 @@
             @csrf
             <div class="form-group">
                 <label for="judul">Judul Artikel</label>
-                <input required="" type="" name="judul" placeholder="" class="form-control"> 
+                <input required="" type="" name="judul" placeholder="" class="form-control">
             </div>
             <div class="row">
                 <div class="col-lg-6">
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label>Kategori</label>
                         <select required="" class="form-control" name="kategori_artikel_id">
-                        <option selected="" disabled="">- PILIH KATEGORI -</option>
+                        <option selected="" disabled="" value="">- PILIH KATEGORI -</option>
                         @foreach($kategoriArtikel as $kategori)
                             <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
                         @endforeach

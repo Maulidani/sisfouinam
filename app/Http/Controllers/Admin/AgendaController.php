@@ -96,7 +96,7 @@ class AgendaController extends Controller
             'user_id' => auth()->user()->id,
         ]);
         $agenda->update($request->all());
-           
+
         return redirect()->route('admin.agenda.index')->with('success','Data berhasil diupdate');
     }
 
@@ -107,7 +107,7 @@ class AgendaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Agenda $agenda)
-    {   
+    {
         $agenda->delete();
         return redirect()->route('admin.agenda.index')->with('success','Data berhasil dihapus');
     }
