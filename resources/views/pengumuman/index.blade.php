@@ -3,7 +3,6 @@
 ])
 @section('content')
 
-@if($pengumuman->count() > 0)
 <section class="upcoming-events section-padding-100-0 mb-5">
     <div class="container">
         <div class="row">
@@ -37,6 +36,4 @@
         </div>
     </div>
 </section>
-@endif
-
 @stop
