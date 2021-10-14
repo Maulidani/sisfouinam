@@ -1,5 +1,5 @@
 ## SISFO UINAM <p><b>
-SISFO UINAM adalah aplikasi website sekolah dibuat dengan framework laravel 8.
+SISFO UINAM adalah aplikasi website informasi IT dibuat dengan framework laravel 8.
 </b></p>
 
 ## Instalasi
