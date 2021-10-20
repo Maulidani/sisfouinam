@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Agenda;
 use App\Models\Artikel;
 use App\Models\Pengumuman;
+use App\Models\Pengurus;
 
 class HomeController extends Controller
 {
@@ -21,7 +22,8 @@ class HomeController extends Controller
 
     public function about()
     {
-    	return view('home.about');
+        $pengurus = Pengurus::with(['user', 'divisiPengurus'])->get();
+    	return view('home.about', compact('pengurus'));
     }
 
     public function contact()

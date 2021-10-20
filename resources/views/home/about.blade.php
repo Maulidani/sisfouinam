@@ -71,8 +71,37 @@
                     </div>
                 </div>
 
+                <div class="col-12">
+                    <div class="page-content">
+                        <h4>Struktur Organisasi HMJ-SI</h4>
+                        <img src="{{ asset('img/photo') }}/struktur-organisasi.jpg" width="100%" height="100%"
+                            style="object-fit: cover; object-position: center;">
+                        <div class="card-body table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Nama
+                                    </th>
+                                    <th>
+                                        Jabatan / Divisi
+                                    </th>
+                                </tr>
+                                @foreach ($pengurus as $pengurus_)
+                                    <tr>
+                                        <td>
+                                            <p>{{ $pengurus_->nama_pengurus }} </p>
+                                        </td>
+                                        <td>
+                                            <p>{{ $pengurus_->divisiPengurus->nama_divisi ?? 'divisi dihapus' }}</p>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="col-md-4 mb-3" style="margin-top: 50px;">
+                {{-- <div class="col-md-4 mb-3" style="margin-top: 50px;">
                     <div class="card" style="text-align: center;">
                         <div class="card-header">
                             {{ 'Ketua umum' }}
@@ -136,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
